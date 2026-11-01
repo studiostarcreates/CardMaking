@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://782d54jjcbhk"]
+
+[ext_resource type="Script" uid="uid://bpccm6slrukec" path="res://characters/squire/squire.gd" id="1_608dt"]
+[ext_resource type="Texture2D" uid="uid://s37ox0g2td13" path="res://characters/squire/squire.png" id="1_oa8n6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_saoxj"]
+size = Vector2(80, 105)
+
+[node name="Squire" type="Node2D" unique_id=741731806]
+script = ExtResource("1_608dt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=424617387]
+texture = ExtResource("1_oa8n6")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2028634319]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=735954523]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_saoxj")

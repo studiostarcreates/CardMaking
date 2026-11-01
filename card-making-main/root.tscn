@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bkmtjsq8h3p8v"]
+
+[ext_resource type="Script" uid="uid://gjmwuq8b02c2" path="res://root.gd" id="1_pq8q7"]
+[ext_resource type="Texture2D" uid="uid://sj8ujykbw4i" path="res://hand/hand.png" id="2_pyidc"]
+[ext_resource type="Script" uid="uid://clt873phcfbuu" path="res://hand/hand_manager.gd" id="3_vvh5c"]
+[ext_resource type="PackedScene" uid="uid://c8mk3h50bhjx7" path="res://characters/chimera/chimera.tscn" id="4_jnlp7"]
+[ext_resource type="PackedScene" uid="uid://782d54jjcbhk" path="res://characters/squire/squire.tscn" id="5_l8v81"]
+
+[node name="Root" type="Node2D" unique_id=877265745]
+script = ExtResource("1_pq8q7")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=573850678]
+offset_top = 288.0
+offset_right = 640.0
+offset_bottom = 400.0
+texture = ExtResource("2_pyidc")
+
+[node name="HandManager" type="Control" parent="." unique_id=928058461 groups=["hand_manager"]]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("3_vvh5c")
+metadata/_custom_type_script = "uid://clt873phcfbuu"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HandManager" unique_id=466136909]
+custom_minimum_size = Vector2(0, 112)
+custom_maximum_size = Vector2(400, 112)
+layout_mode = 0
+offset_left = 120.0
+offset_top = 288.0
+offset_right = 520.0
+offset_bottom = 400.0
+theme_override_constants/separation = -48
+alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=900065271]
+offset_left = 7.0
+offset_top = 325.0
+offset_right = 105.0
+offset_bottom = 356.0
+text = "Draw Cards"
+
+[node name="Button2" type="Button" parent="." unique_id=1458335885]
+offset_left = 530.0
+offset_top = 325.0
+offset_right = 637.0
+offset_bottom = 356.0
+text = "Discard Card"
+
+[node name="Chimera" parent="." unique_id=741731806 instance=ExtResource("4_jnlp7")]
+position = Vector2(434, 143)
+
+[node name="Squire" parent="." unique_id=1222993561 instance=ExtResource("5_l8v81")]
+position = Vector2(188, 140)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardStats" format=3 uid="uid://pt8dxc512d4w"]
+
+[ext_resource type="Script" uid="uid://c4tci1nw3mwaf" path="res://cards/cardstat/card_stats.gd" id="1_pely4"]
+[ext_resource type="Texture2D" uid="uid://c8dbbxmccdawt" path="res://cards/resources/defend.png" id="1_tkjgb"]
+[ext_resource type="Texture2D" uid="uid://bwhwhw22jx38q" path="res://cards/resources/card_frame_gold.png" id="2_alwxu"]
+[ext_resource type="Texture2D" uid="uid://l0fotdnytux4" path="res://cards/resources/card_energy.png" id="3_wnuab"]
+
+[resource]
+script = ExtResource("1_pely4")
+card_value = 5
+energy = 2
+card_name = "Defend"
+card_description = "Gain 5 block."
+card_frame = ExtResource("2_alwxu")
+card_art = ExtResource("1_tkjgb")
+energy_art = ExtResource("3_wnuab")
+target_layer = 3
+metadata/_custom_type_script = "uid://c4tci1nw3mwaf"

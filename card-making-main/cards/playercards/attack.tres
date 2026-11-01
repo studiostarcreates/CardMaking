@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardStats" format=3 uid="uid://b6gykm4ts0wt3"]
+
+[ext_resource type="Script" uid="uid://c4tci1nw3mwaf" path="res://cards/cardstat/card_stats.gd" id="1_8aebp"]
+[ext_resource type="Texture2D" uid="uid://cfj7usvevl4rm" path="res://cards/resources/attack.png" id="1_inhsk"]
+[ext_resource type="Texture2D" uid="uid://dlpdexmu3k520" path="res://cards/resources/card_frame.png" id="2_excue"]
+[ext_resource type="Texture2D" uid="uid://l0fotdnytux4" path="res://cards/resources/card_energy.png" id="3_6xtol"]
+
+[resource]
+script = ExtResource("1_8aebp")
+card_value = 6
+energy = 1
+card_name = "Attack"
+card_description = "Deals 6 damage."
+card_frame = ExtResource("2_excue")
+card_art = ExtResource("1_inhsk")
+energy_art = ExtResource("3_6xtol")
+target_layer = 2
+metadata/_custom_type_script = "uid://c4tci1nw3mwaf"
